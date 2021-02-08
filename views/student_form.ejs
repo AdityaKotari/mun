@@ -4,8 +4,10 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Delegate Application</title>
+  <title>Application For Student </title>
   <link rel="stylesheet" href="style.css">
+  
+  
   <link rel="icon" type="image/icon" href="images/logo_white.png">
 </head>
 
@@ -28,26 +30,26 @@
 
       <div class="form-group">
         <label for="roll" id="name-label">College</label>
-        <input type="text" name="College" id="College" class="form-control" placeholder="Enter your College" required />
+        <input type="text" name="Student_College" id="College" class="form-control" placeholder="Enter your College" required />
       </div>
 
       <div class="form-group">
         <label id="email-label" for="email">Email</label>
-        <input type="email" name="email" id="email" class="form-control" placeholder="Enter your Email" required />
+        <input type="email" name="Student_email" id="email" class="form-control" placeholder="Enter your Email" required />
       </div>
       <!-- <span class="clue"></span> -->
       <!-- min="0000000000" max="9999999999" -->
       <div class="form-group">
         <label id="number-label" for="number"> Contact No.</label>
-        <input type="number" name="contact" id="number" min="0000000000" max="9999999999" class="form-control" placeholder="Contact No." required/>
+        <input type="number" name="Student_contact" id="number" min="0000000000" max="9999999999" class="form-control" placeholder="Contact No." required/>
       </div>
 
       <div class="form-group">
         <p>Committee Preference</p>
-        <select id="dropdown" name="Committee" class="form-control" required>
+        <select id="dropdown" name="Student_Committee" class="form-control" required>
           <option disabled selected value>Select Committee</option>
-          <option value="UNGA">UNHSC</option>
-          <option value="UNSC">UNHRC</option>
+          <option value="UNHSC">UNHSC</option>
+          <option value="UNHRC">UNOOSA</option>
           <!-- <option value="UNGA">UNGA</option>
           <option value="UNSC">UNSC</option>
           <option value="UNGA">UNGA</option> -->
@@ -58,45 +60,400 @@
         <!-- <p>
           1St Country Preference
         </p> -->
-        <div class="form-group">
+        <!-- <div class="form-group">
           <label for="roll" id="name-label">1st Country Preference</label>
-          <input type="text" name="1St Country Preference" id="1St Country Preference" class="form-control" placeholder="Enter Country" required />
+          <input type="text" name="ST_1St Country Preference" id="1St Country Preference" class="form-control" placeholder="Enter Country" required />
+        </div> -->
+        <!-- UNHSC -->
+        <div class="form-group">
+          <p>1st Country Preference For UNHSC</p>
+          <select id="dropdown" name="ST_UNHSC 1st Country" class="form-control" required>
+            <option disabled selected value>Select Committee</option>
+            <option value="Afghanistan">Afghanistan</option>
+            <option value="Albania">Albania</option>
+            <option value="Argentina">Argentina</option>
+            <option value="Armenia">Armenia</option>
+            <option value="Azerbaijan">Azerbaijan</option>
+              <option value="Belarus">Belarus</option>
+              <option value="Belgium">Belgium</option>
+              <option value="Bolivia">Bolivia</option>
+              <option value="Brazil">Brazil</option>
+              <option value="Bulgaria">Bulgaria</option>
+              <option value="Chile">Chile</option>
+              <option value="China">China</option>
+              <option value="Colombia">Colombia</option>
+              <option value="Croatia">Croatia</option>
+              <option value="Czechia">Czechia</option>
+              <option value="Denmark">Denmark</option>
+              <option value="Estonia">Estonia</option>
+              <option value="Finland">Finland</option>
+              <option value="France">France</option>
+              <option value="Georgia">Georgia</option>
+              <option value="Germany">Germany</option>
+              <option value="Greece">Greece</option>
+              <option value="Hungary">Hungary</option>
+              <option value="India">India</option>
+              <option value="Ireland">Ireland</option>
+              <option value="Ireland">Ireland</option>
+              <option value="Kazakhstan">Kazakhstan</option>
+              <option value="Kyrgyzstan">Kyrgyzstan</option>
+              <option value="Latvia">Latvia</option>
+              <option value="Lithuania">Lithuania</option>
+              <option value="Luxemberg">Luxemberg</option>
+              <option value="Moldova">Moldova</option>
+              <option value="Netherlands">Netherlands</option>
+              <option value="Norway">Norway</option>
+              <option value="Peru">Peru</option>
+              <option value="Poland">Poland</option>
+              <option value="Portugal">Portugal</option>
+              <option value="Romania">Romania</option>
+              <option value="Russia">Russia</option>
+              <option value="Slovakia">Slovakia</option>
+              <option value="Spain">Spain</option>
+              <option value="Sweden">Sweden</option>
+              <option value="Tajikistan">Tajikistan</option>
+              <option value="Turkmenistan">Turkmenistan</option>
+              <option value="Ukraine">Ukraine</option>
+              <option value="United Kingdom">United Kingdom</option>
+              <option value="Uruguay">Uruguay</option>
+              <option value="USA">USA</option>
+              <option value="Uzbekistan">Uzbekistan</option>
+              <option value="Venezuela">Venezuela</option>
+          </select>
         </div>
 
-      <div class="form-group">
+      <!-- <div class="form-group">
         <label for="roll" id="name-label">2nd Country Preference</label>
-        <input type="text" name="2nd Country Preference" id="2nd Country Preference" class="form-control" placeholder="Enter Country" required />
+        <input type="text" name="ST_2nd Country Preference" id="2nd Country Preference" class="form-control" placeholder="Enter Country" required />
+      </div> -->
+      <div class="form-group">
+        <p>2nd Country Preference For UNHSC</p>
+        <select id="dropdown" name="ST_UNHSC 2nd Country" class="form-control" required>
+          <option disabled selected value>Select Committee</option>
+          <option value="Afghanistan">Afghanistan</option>
+            <option value="Albania">Albania</option>
+            <option value="Argentina">Argentina</option>
+            <option value="Armenia">Armenia</option>
+            <option value="Azerbaijan">Azerbaijan</option>
+              <option value="Belarus">Belarus</option>
+              <option value="Belgium">Belgium</option>
+              <option value="Bolivia">Bolivia</option>
+              <option value="Brazil">Brazil</option>
+              <option value="Bulgaria">Bulgaria</option>
+              <option value="Chile">Chile</option>
+              <option value="China">China</option>
+              <option value="Colombia">Colombia</option>
+              <option value="Croatia">Croatia</option>
+              <option value="Czechia">Czechia</option>
+              <option value="Denmark">Denmark</option>
+              <option value="Estonia">Estonia</option>
+              <option value="Finland">Finland</option>
+              <option value="France">France</option>
+              <option value="Georgia">Georgia</option>
+              <option value="Germany">Germany</option>
+              <option value="Greece">Greece</option>
+              <option value="Hungary">Hungary</option>
+              <option value="India">India</option>
+              <option value="Ireland">Ireland</option>
+              <option value="Ireland">Ireland</option>
+              <option value="Kazakhstan">Kazakhstan</option>
+              <option value="Kyrgyzstan">Kyrgyzstan</option>
+              <option value="Latvia">Latvia</option>
+              <option value="Lithuania">Lithuania</option>
+              <option value="Luxemberg">Luxemberg</option>
+              <option value="Moldova">Moldova</option>
+              <option value="Netherlands">Netherlands</option>
+              <option value="Norway">Norway</option>
+              <option value="Peru">Peru</option>
+              <option value="Poland">Poland</option>
+              <option value="Portugal">Portugal</option>
+              <option value="Romania">Romania</option>
+              <option value="Russia">Russia</option>
+              <option value="Slovakia">Slovakia</option>
+              <option value="Spain">Spain</option>
+              <option value="Sweden">Sweden</option>
+              <option value="Tajikistan">Tajikistan</option>
+              <option value="Turkmenistan">Turkmenistan</option>
+              <option value="Ukraine">Ukraine</option>
+              <option value="United Kingdom">United Kingdom</option>
+              <option value="Uruguay">Uruguay</option>
+              <option value="USA">USA</option>
+              <option value="Uzbekistan">Uzbekistan</option>
+              <option value="Venezuela">Venezuela</option>
+        </select>
+      </div>
+
+      <!-- <div class="form-group">
+        <label for="roll" id="name-label">3rd Country Preference</label>
+        <input type="text" name="ST_3rd Country Preference" id="3rd Country Preference" class="form-control" placeholder="Enter Country" required />
+      </div> -->
+      <div class="form-group">
+        <p>3rd Country Preference For UNHSC</p>
+        <select id="dropdown" name="ST_UNHSC 3rd Country" class="form-control" required>
+          <option disabled selected value>Select Committee</option>
+          <option value="Afghanistan">Afghanistan</option>
+          <option value="Albania">Albania</option>
+          <option value="Argentina">Argentina</option>
+          <option value="Armenia">Armenia</option>
+          <option value="Azerbaijan">Azerbaijan</option>
+            <option value="Belarus">Belarus</option>
+            <option value="Belgium">Belgium</option>
+            <option value="Bolivia">Bolivia</option>
+            <option value="Brazil">Brazil</option>
+            <option value="Bulgaria">Bulgaria</option>
+            <option value="Chile">Chile</option>
+            <option value="China">China</option>
+            <option value="Colombia">Colombia</option>
+            <option value="Croatia">Croatia</option>
+            <option value="Czechia">Czechia</option>
+            <option value="Denmark">Denmark</option>
+            <option value="Estonia">Estonia</option>
+            <option value="Finland">Finland</option>
+            <option value="France">France</option>
+            <option value="Georgia">Georgia</option>
+            <option value="Germany">Germany</option>
+            <option value="Greece">Greece</option>
+            <option value="Hungary">Hungary</option>
+            <option value="India">India</option>
+            <option value="Ireland">Ireland</option>
+            <option value="Ireland">Ireland</option>
+            <option value="Kazakhstan">Kazakhstan</option>
+            <option value="Kyrgyzstan">Kyrgyzstan</option>
+            <option value="Latvia">Latvia</option>
+            <option value="Lithuania">Lithuania</option>
+            <option value="Luxemberg">Luxemberg</option>
+            <option value="Moldova">Moldova</option>
+            <option value="Netherlands">Netherlands</option>
+            <option value="Norway">Norway</option>
+            <option value="Peru">Peru</option>
+            <option value="Poland">Poland</option>
+            <option value="Portugal">Portugal</option>
+            <option value="Romania">Romania</option>
+            <option value="Russia">Russia</option>
+            <option value="Slovakia">Slovakia</option>
+            <option value="Spain">Spain</option>
+            <option value="Sweden">Sweden</option>
+            <option value="Tajikistan">Tajikistan</option>
+            <option value="Turkmenistan">Turkmenistan</option>
+            <option value="Ukraine">Ukraine</option>
+            <option value="United Kingdom">United Kingdom</option>
+            <option value="Uruguay">Uruguay</option>
+            <option value="USA">USA</option>
+            <option value="Uzbekistan">Uzbekistan</option>
+            <option value="Venezuela">Venezuela</option>
+        </select>
+      </div>
+      <!-- UNOOSA -->
+      <div class="form-group">
+        <p>1st Country Preference For UNOOSA</p>
+        <select id="dropdown" name="ST_UNOOSA 1st Country" class="form-control" required>
+          <option disabled selected value>Select Committee</option>
+          <option value="Argentina ">Argentina </option>
+          <option value="Australia ">Australia </option>
+          <option value="Belgium">Belgium</option>
+          <option value="Brazil">Brazil</option>
+          <option value="Canada">Canada</option>
+            <option value="France">France</option>
+            <option value="India">India</option>
+            <option value="Iran">Iran</option>
+            <option value="Italy">Italy</option>
+            <option value="Japan">Japan</option>
+            <option value="Mexico">Mexico</option>
+            <option value="Poland">Poland</option>
+            <option value="Sweden">Sweden</option>
+            <option value="Russia">Russia</option>
+            <option value="UAE">UAE</option>
+            <option value="USA">USA</option>
+            <option value="United Kingdom">United Kingdom</option>
+            <option value="Austria">Austria</option>
+            <option value="Hungary">Hungary</option>
+            <option value="Chile">Chile</option>
+            <option value="Germany">Germany</option>
+            <option value="Indonesia">Indonesia</option>
+            <option value="Kenya">Kenya</option>
+            <option value="Morocco">Morocco</option>
+            <option value="Nigeria">Nigeria</option>
+            <option value="Iraq">Iraq</option>
+            <option value="South Korea ">South Korea </option>
+            <option value="Malaysia">Malaysia</option>
+            <option value="South Africa ">South Africa </option>
+            <option value="Peru">Peru</option>
+            <option value="Cuba">Cuba</option>
+            <option value="Ukraine">Ukraine</option>
+            <option value="Singapore">Singapore</option>
+            <option value="Finland">Finland</option>
+            <option value="Dominican Republic ">Dominican Republic </option>
+            <option value="New Zealand ">New Zealand </option>
+            <option value="Cyprus">Cyprus</option>
+            <option value="Qatar">Qatar</option>
+            <option value="Switzerland">Switzerland</option>
+            <option value="Jordan">Jordan</option>
+            <option value="Sri Lanka ">Sri Lanka </option>
+            <option value="Denmark ">Denmark </option>
+            <option value="Norway">Norway</option>
+            <option value="Turkey">Turkey</option>
+            <option value="Netherlands">Netherlands</option>
+            <option value="Spain">Spain</option>
+            <option value="Greece">Greece</option>
+            <option value="China">China</option>
+            <option value="Pakistan">Pakistan</option>
+            <option value="Colombia">Colombia</option>
+        </select>
       </div>
 
       <div class="form-group">
-        <label for="roll" id="name-label">3rd Country Preference</label>
-        <input type="text" name="3rd Country Preference" id="3rd Country Preference" class="form-control" placeholder="Enter Country" required />
+        <p>2nd Country Preference For UNOOSA</p>
+        <select id="dropdown" name="ST_UNOOSA 2nd Country" class="form-control" required>
+          <option disabled selected value>Select Committee</option>
+          <option value="Argentina ">Argentina </option>
+          <option value="Australia ">Australia </option>
+          <option value="Belgium">Belgium</option>
+          <option value="Brazil">Brazil</option>
+          <option value="Canada">Canada</option>
+            <option value="France">France</option>
+            <option value="India">India</option>
+            <option value="Iran">Iran</option>
+            <option value="Italy">Italy</option>
+            <option value="Japan">Japan</option>
+            <option value="Mexico">Mexico</option>
+            <option value="Poland">Poland</option>
+            <option value="Sweden">Sweden</option>
+            <option value="Russia">Russia</option>
+            <option value="UAE">UAE</option>
+            <option value="USA">USA</option>
+            <option value="United Kingdom">United Kingdom</option>
+            <option value="Austria">Austria</option>
+            <option value="Hungary">Hungary</option>
+            <option value="Chile">Chile</option>
+            <option value="Germany">Germany</option>
+            <option value="Indonesia">Indonesia</option>
+            <option value="Kenya">Kenya</option>
+            <option value="Morocco">Morocco</option>
+            <option value="Nigeria">Nigeria</option>
+            <option value="Iraq">Iraq</option>
+            <option value="South Korea ">South Korea </option>
+            <option value="Malaysia">Malaysia</option>
+            <option value="South Africa ">South Africa </option>
+            <option value="Peru">Peru</option>
+            <option value="Cuba">Cuba</option>
+            <option value="Ukraine">Ukraine</option>
+            <option value="Singapore">Singapore</option>
+            <option value="Finland">Finland</option>
+            <option value="Dominican Republic ">Dominican Republic </option>
+            <option value="New Zealand ">New Zealand </option>
+            <option value="Cyprus">Cyprus</option>
+            <option value="Qatar">Qatar</option>
+            <option value="Switzerland">Switzerland</option>
+            <option value="Jordan">Jordan</option>
+            <option value="Sri Lanka ">Sri Lanka </option>
+            <option value="Denmark ">Denmark </option>
+            <option value="Norway">Norway</option>
+            <option value="Turkey">Turkey</option>
+            <option value="Netherlands">Netherlands</option>
+            <option value="Spain">Spain</option>
+            <option value="Greece">Greece</option>
+            <option value="China">China</option>
+            <option value="Pakistan">Pakistan</option>
+            <option value="Colombia">Colombia</option>
+        </select>
       </div>
+
+      <div class="form-group">
+        <p>3rd Country Preference For UNOOSA</p>
+        <select id="dropdown" name="ST_UNOOSA 3rd Country" class="form-control" required>
+          <option disabled selected value>Select Committee</option>
+          <option value="Argentina ">Argentina </option>
+          <option value="Australia ">Australia </option>
+          <option value="Belgium">Belgium</option>
+          <option value="Brazil">Brazil</option>
+          <option value="Canada">Canada</option>
+            <option value="France">France</option>
+            <option value="India">India</option>
+            <option value="Iran">Iran</option>
+            <option value="Italy">Italy</option>
+            <option value="Japan">Japan</option>
+            <option value="Mexico">Mexico</option>
+            <option value="Poland">Poland</option>
+            <option value="Sweden">Sweden</option>
+            <option value="Russia">Russia</option>
+            <option value="UAE">UAE</option>
+            <option value="USA">USA</option>
+            <option value="United Kingdom">United Kingdom</option>
+            <option value="Austria">Austria</option>
+            <option value="Hungary">Hungary</option>
+            <option value="Chile">Chile</option>
+            <option value="Germany">Germany</option>
+            <option value="Indonesia">Indonesia</option>
+            <option value="Kenya">Kenya</option>
+            <option value="Morocco">Morocco</option>
+            <option value="Nigeria">Nigeria</option>
+            <option value="Iraq">Iraq</option>
+            <option value="South Korea ">South Korea </option>
+            <option value="Malaysia">Malaysia</option>
+            <option value="South Africa ">South Africa </option>
+            <option value="Peru">Peru</option>
+            <option value="Cuba">Cuba</option>
+            <option value="Ukraine">Ukraine</option>
+            <option value="Singapore">Singapore</option>
+            <option value="Finland">Finland</option>
+            <option value="Dominican Republic ">Dominican Republic </option>
+            <option value="New Zealand ">New Zealand </option>
+            <option value="Cyprus">Cyprus</option>
+            <option value="Qatar">Qatar</option>
+            <option value="Switzerland">Switzerland</option>
+            <option value="Jordan">Jordan</option>
+            <option value="Sri Lanka ">Sri Lanka </option>
+            <option value="Denmark ">Denmark </option>
+            <option value="Norway">Norway</option>
+            <option value="Turkey">Turkey</option>
+            <option value="Netherlands">Netherlands</option>
+            <option value="Spain">Spain</option>
+            <option value="Greece">Greece</option>
+            <option value="China">China</option>
+            <option value="Pakistan">Pakistan</option>
+            <option value="Colombia">Colombia</option>
+        </select>
+      </div>
+
+    <!-- <div class="form-group">
+      <label for="roll" id="name-label">2nd Country Preference</label>
+      <input type="text" name="ST_2nd Country Preference" id="2nd Country Preference" class="form-control" placeholder="Enter Country" required />
+    </div> -->
+    
+
+    <!-- <div class="form-group">
+      <label for="roll" id="name-label">3rd Country Preference</label>
+      <input type="text" name="ST_3rd Country Preference" id="3rd Country Preference" class="form-control" placeholder="Enter Country" required />
+    </div> -->
+    
+
+
+
       <div class="form-group">
         <p>Have you participated in any MUNs before?</p>
         <!-- <label> <input name="userRecommend" value="definitely" type="radio" class="input-radio"
             checked />Definitely</label> -->
-        <label> <input name="Past MUN" value="YES" type="radio" class="input-radio" />YES</label>
-        <label> <input name="Past MUN" value="NO" type="radio" class="input-radio" />NO</label>
+        <label> <input name="ST_Past MUN" value="YES" type="radio" class="input-radio" />YES</label>
+        <label> <input name="ST_Past MUN" value="NO" type="radio" class="input-radio" />NO</label>
       </div>
       <div class="form-group">
         <label for="Past experience" id="Past Exprerience">If yes, then give us a brief description</label>
-        <input type="text" name="Past Exprerience" id="Description" class="form-control" placeholder="Describe your experience with MUNs"/>
+        <input type="text" name="ST_Past Exprerience" id="Description" class="form-control" placeholder="Describe your experience with MUNs"/>
       </div>
       <div class="form-group">
         <p>
           Payment Mode
           <span class="clue">(Payment Mode)</span>
         </p>
-        <label><input name="prefer" value="Gpay" type="checkbox" class="input-checkbox" />Gpay</label>
-        <label><input name="prefer" value="Phonepe" type="checkbox" class="input-checkbox" />Phonepe</label>
+        <label><input name="ST_prefer" value="Gpay" type="checkbox" class="input-checkbox" />Gpay</label>
+        <label><input name="ST_prefer" value="Phonepe" type="checkbox" class="input-checkbox" />Phonepe</label>
       </div>
 
       <div class="form-group">
         <p>Queries
           <span class="clue"></span>
         </p>
-        <textarea id="comments" class="input-textarea form-control" name="Queries"
+        <textarea id="comments" class="input-textarea form-control" name="Student_Queries"
           placeholder="Enter any queries here..."></textarea>
       </div>
 
