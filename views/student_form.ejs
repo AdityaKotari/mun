@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Application For Student </title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <div class="container">
+    <header class="header">
+      <h1 id="title" class="text-center">
+        NITSMUN 2021 Delegate Applications
+      </h1>
+    </header>
+
+    <form id="survey-form" method="POST" action="/">
+      <!-- <div class="form-group">
+        <label> <input name="Apply For" value="ST" type="radio" class="input-radio" required/>ST</label>
+      </div> -->
+      <div class="form-group">
+        <label for="name" id="name-label">Name</label>
+        <input type="text" name="Student_name" id="name" class="form-control" placeholder="Enter your name" required />
+      </div>
+
+      <div class="form-group">
+        <label for="roll" id="name-label">College</label>
+        <input type="text" name="College" id="College" class="form-control" placeholder="Enter your College" required />
+      </div>
+
+      <div class="form-group">
+        <label id="email-label" for="email">Email</label>
+        <input type="email" name="email" id="email" class="form-control" placeholder="Enter your Email" required />
+      </div>
+      <!-- <span class="clue"></span> -->
+      <!-- min="0000000000" max="9999999999" -->
+      <div class="form-group">
+        <label id="number-label" for="number"> Contact No.</label>
+        <input type="number" name="contact" id="number" min="0000000000" max="9999999999" class="form-control" placeholder="Contact No." required/>
+      </div>
+
+      <div class="form-group">
+        <p>Committee Preference</p>
+        <select id="dropdown" name="Committee" class="form-control" required>
+          <option disabled selected value>Select Committee</option>
+          <option value="UNGA">UNHSC</option>
+          <option value="UNSC">UNHRC</option>
+          <!-- <option value="UNGA">UNGA</option>
+          <option value="UNSC">UNSC</option>
+          <option value="UNGA">UNGA</option> -->
+        </select>
+      </div>
+
+      <!-- <div class="form-group"> -->
+        <!-- <p>
+          1St Country Preference
+        </p> -->
+        <div class="form-group">
+          <label for="roll" id="name-label">1st Country Preference</label>
+          <input type="text" name="1St Country Preference" id="1St Country Preference" class="form-control" placeholder="Enter Country" required />
+        </div>
+
+      <div class="form-group">
+        <label for="roll" id="name-label">2nd Country Preference</label>
+        <input type="text" name="2nd Country Preference" id="2nd Country Preference" class="form-control" placeholder="Enter Country" required />
+      </div>
+
+      <div class="form-group">
+        <label for="roll" id="name-label">3rd Country Preference</label>
+        <input type="text" name="3rd Country Preference" id="3rd Country Preference" class="form-control" placeholder="Enter Country" required />
+      </div>
+      <div class="form-group">
+        <p>Have you participated in any MUNs before?</p>
+        <!-- <label> <input name="userRecommend" value="definitely" type="radio" class="input-radio"
+            checked />Definitely</label> -->
+        <label> <input name="Past MUN" value="YES" type="radio" class="input-radio" />YES</label>
+        <label> <input name="Past MUN" value="NO" type="radio" class="input-radio" />NO</label>
+      </div>
+      <div class="form-group">
+        <label for="Past experience" id="Past Exprerience">If yes, then give us a brief description</label>
+        <input type="text" name="Past Exprerience" id="Description" class="form-control" placeholder="Describe your experience with MUNs"/>
+      </div>
+      <div class="form-group">
+        <p>
+          Payment Mode
+          <span class="clue">(Payment Mode)</span>
+        </p>
+        <label><input name="prefer" value="Gpay" type="checkbox" class="input-checkbox" />Gpay</label>
+        <label><input name="prefer" value="Phonepe" type="checkbox" class="input-checkbox" />Phonepe</label>
+      </div>
+
+      <div class="form-group">
+        <p>Queries
+          <span class="clue"></span>
+        </p>
+        <textarea id="comments" class="input-textarea form-control" name="Queries"
+          placeholder="Enter any queries here..."></textarea>
+      </div>
+
+      <div class="form-group">
+        <button type="submit" id="submit" class="submit-button">
+          Submit
+        </button>
+      </div>
+    </form>
+  </div>
+
+  <script>
+    document.getElementById('survey-form').reset()
+  </script>
+</body>
+
+</html>

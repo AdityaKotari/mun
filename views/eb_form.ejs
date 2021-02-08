@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Application For EB</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <div class="container">
+    <header class="header">
+      <h1 id="title" class="text-center">
+        NITSMUN 2021 EB Applications
+      </h1>
+    </header>
+
+    <form id="survey-form" method="POST" action="/">
+        <!-- <div class="form-group">
+            <label> <input name="Apply For" value="EB" type="radio" class="input-radio" required/>EB</label>
+          </div> -->
+      <div class="form-group">
+        <label for="name" id="name-label">Name</label>
+        <input type="text" name="Eb_Name" id="name" class="form-control" placeholder="Enter your name" required />
+      </div>
+
+      <div class="form-group">
+        <label for="roll" id="name-label">Education/Occupation</label>
+        <input type="text" name="Education" id="roll" class="form-control" placeholder="Enter your Education/Occupation details" required />
+      </div>
+
+      <div class="form-group">
+        <label id="email-label" for="email">Email</label>
+        <input type="email" name="email" id="email" class="form-control" placeholder="Enter your Email" required />
+      </div>
+
+      <div class="form-group">
+        <label id="number-label" for="number"> Contact No. <span class="clue"></span></label>
+        <input type="number" name="contact" id="number" min="0000000000" max="9999999999" class="form-control"
+          placeholder="Contact No."/>
+      </div>
+
+      <div class="form-group">
+        <label id="number-label" for="number"> Resume <span class="clue"></span></label>
+        <input type="text" name="Resume" id="number" class="form-control" placeholder="Provide Resume link" required/>
+      </div>
+      <div class="form-group">
+        <label id="number-label" for="number">Profile Links<span class="clue"></span></label>
+        <input type="text" name="Facebook link" id="number" class="form-control" placeholder="Enter any Social media links" />
+      </div>
+
+      <div class="form-group">
+        <p>Queries
+          <span class="clue"></span>
+        </p>
+        <textarea id="comments" class="input-textarea form-control" name="Queries"
+          placeholder="Enter any queries"></textarea>
+      </div>
+
+      <div class="form-group">
+        <button type="submit" id="submit" class="submit-button">
+          Submit
+        </button>
+      </div>
+    </form>
+  </div>
+
+  <script>
+    document.getElementById('survey-form').reset()
+  </script>
+</body>
+
+</html>
