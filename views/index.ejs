@@ -70,6 +70,14 @@
       }
 
     }
+    .set-width{
+      min-height:100vh;
+    }
+    @media screen and (max-width : 768px) {
+      .set-width{
+        min-height:50vh;
+      }
+    }
 
     body::-webkit-scrollbar {
       width: 0.3em;
@@ -82,6 +90,11 @@
     body::-webkit-scrollbar-thumb {
       background-color: darkgrey;
       outline: 1px solid slategrey;
+    }
+    @media screen and (max-width: 768px) {
+      .navbar{
+        text-align: center;
+      }
     }
   </style>
 </head>
@@ -114,10 +127,10 @@
           </li>
           <li class="nav-item dropdown active px-4">
             <a class="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-toggle="dropdown"
-              aria-haspopup="true" aria-expanded="false" style="color: #ef6c57;">
+              aria-haspopup="true" aria-expanded="false" style="color: #f73167;">
               APPLY
             </a>
-            <div class="dropdown-menu dropdown-menu-right bg-primary" aria-labelledby="navbarDropdown"
+            <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown"
               style="font-size: 22px;">
               <a class="dropdown-item" href="/apply_ST">Delegate Applications</a>
               <a class="dropdown-item" href="/apply_EB">Executive Board Applications</a>
@@ -156,7 +169,7 @@
       <p class="text1" id="text1" style="text-align: center;font-size:45px;line-height:50px;margin: 0; padding: 0;"></p> -->
       <br>
       <a id="DashboardApply" type="button" href="/apply_ST" class="btn btn-primary btn-lg " role="button" style="
-    height: 56px; width: 260px;background-color: #ef6c57; opacity: 1;  
+    height: 56px; width: 260px;background-color:#96193B; opacity: 1;  
 font-family: Roboto;
 padding: 0;
 font-style: normal;
@@ -165,8 +178,9 @@ text-align: center;
 font-size: 2rem;
 
 align-self: flex-end;
-border-color: #ef6c57;
+border-color:#96193B;
 color: ;">Apply now!</a>
+
 
       <!-- </div> -->
 
@@ -204,7 +218,7 @@ color: #FFFFFF;">Register now!</button>
 
 
   <div class="row no-gutters countdown-container"
-    style="background-color:rgba(255, 87, 51, 0.84);color:#fff;display:flex;padding:40px;align-items:center;">
+    style="background-color:#96193B ;color:#fff;display:flex;padding:40px;align-items:center;">
     <div class="col-md-2">
     </div>
     <div class="col-md-8" style="">
@@ -233,7 +247,7 @@ color: #FFFFFF;">Register now!</button>
 
   <div style="padding: 50px; background-color: aliceblue;">
     <h1 class="team_text">Delegate Application Rounds</h1>
-    <table class="table table-striped table-bordered">
+    <table style="text-align: center;" class="table table-striped table-bordered">
       <thead>
         <tr>
           <th scope="col">Round</th>
@@ -257,11 +271,11 @@ color: #FFFFFF;">Register now!</button>
           <td>₹350</td>
           <td>20th-25th Feb 2021</td>
         </tr>
-        <tr>
-          <td colspan="3">*Bulk Registration - For all rounds of application, for 5+ participation together we will provide Rs. 50 discount per person</td>
-        </tr>
       </tbody>
     </table>
+          <div>
+        <b>*Bulk Registration</b> - For all the rounds of application, for 5+ participation together we will provide Rs. 50 discount per person
+          </div>
   </div>
   <div class="row no-gutters largescreen-secretary">
     <div class="col-md-1"></div>
@@ -435,8 +449,8 @@ color: #FFFFFF;">Register now!</button>
     <h1 class="team_text">About Us</h1>
     <div class="row no-gutters">
 
-      <div class="col-md-6 d-flex justify-content-center align-items-center"
-        style="text-align:center;min-height:100vh;">
+      <div class="col-md-6 d-flex justify-content-center align-items-center set-width"
+        style="text-align:center;">
         <img class="img-fluid rounded-circle" src="images/New%20LOGO.png" alt="nits mun logo"
           style="padding-bottom: 70px;padding-left: 10px;width=70%" data-aos="fade-left">
       </div>
@@ -648,10 +662,10 @@ color: #FFFFFF;">Register now!</button>
         <a href="/gallery">Gallery</a>
         ·
         <a class="dropdown-toggle" id="Dropdown2" role="button" data-toggle="dropdown" aria-haspopup="true"
-          aria-expanded="false" style="color: #ef6c57;">
+          aria-expanded="false";>
           Apply
         </a>
-        <div class="dropdown-menu dropdown-menu-right bg-primary" aria-labelledby="Dropdown2">
+        <div class="dropdown-menu dropdown-menu-right " aria-labelledby="Dropdown2">
           <a class="dropdown-item" href="/apply_ST">Delegate Applications</a>
           <a class="dropdown-item" href="/apply_EB">Executive Board Applications</a>
         </div>

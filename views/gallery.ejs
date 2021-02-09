@@ -30,7 +30,13 @@
   <link rel="stylesheet" href="css/justifiedGallery.min.css" />
   <script src="js/jquery.justifiedGallery.min.js"></script>
 
-
+  <style>
+    @media screen and (max-width: 768px) {
+      .navbar{
+        text-align: center;
+      }
+    }
+  </style>
 </head>
 
 <body>
@@ -60,10 +66,10 @@
           </li>
           <li class="nav-item dropdown active px-4">
             <a class="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-toggle="dropdown"
-              aria-haspopup="true" aria-expanded="false" style="color: #ef6c57;">
+              aria-haspopup="true" aria-expanded="false" style="color: #f73167;">
               APPLY
             </a>
-            <div class="dropdown-menu dropdown-menu-right bg-primary" aria-labelledby="navbarDropdown"
+            <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown"
               style="font-size: 22px;">
               <a class="dropdown-item" href="/apply_ST">Delegate Applications</a>
               <a class="dropdown-item" href="/apply_EB">Executive Board Applications</a>
@@ -189,10 +195,10 @@
         <a href="/gallery">Gallery</a>
         ·
       <a class="dropdown-toggle" id="Dropdown2" role="button" data-toggle="dropdown" aria-haspopup="true"
-        aria-expanded="false" style="color: #ef6c57;">
+        aria-expanded="false">
         Apply
       </a>
-      <div class="dropdown-menu dropdown-menu-right bg-primary" aria-labelledby="Dropdown2">
+      <div class="dropdown-menu dropdown-menu-right" aria-labelledby="Dropdown2">
         <a class="dropdown-item" href="/apply_ST">Delegate Applications</a>
         <a class="dropdown-item" href="/apply_EB">Executive Board Applications</a>
       </div>
