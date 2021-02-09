@@ -30,7 +30,13 @@
   <link rel="stylesheet" href="css/justifiedGallery.min.css" />
   <script src="js/jquery.justifiedGallery.min.js"></script>
 
-
+  <style>
+    @media screen and (max-width: 768px) {
+      .navbar{
+        text-align: center;
+      }
+    }
+  </style>
 </head>
 
 <body>
@@ -60,10 +66,10 @@
           </li>
           <li class="nav-item dropdown active px-4">
             <a class="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-toggle="dropdown"
-              aria-haspopup="true" aria-expanded="false" style="color: #ef6c57;">
+              aria-haspopup="true" aria-expanded="false" style="color: #f73167;">
               APPLY
             </a>
-            <div class="dropdown-menu dropdown-menu-right bg-primary" aria-labelledby="navbarDropdown"
+            <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown"
               style="font-size: 22px;">
               <a class="dropdown-item" href="/apply_ST">Delegate Applications</a>
               <a class="dropdown-item" href="/apply_EB">Executive Board Applications</a>
@@ -78,7 +84,7 @@
     </nav>
   </div>
   
-  <h1 class="team_text" style="margin-top: 10vh; padding: 20px;">MUN 2020</h1>
+  <h1 class="team_text" style="margin-top: 10vh; padding: 20px;">Glimpses of NITSMUN 2020</h1>
   <div id="gal1" class="justified-gallery1">
     <a href="images/mun2020_1.jpg">
       <img src="images/mun2020_1.jpg">
@@ -125,22 +131,19 @@
     $('#gal1').justifiedGallery({
       rowHeight: 300,
       maxRowHeight: 350,
-      lastRow: 'nojustify',
+      lastRow: 'center',
       margins: 10
     });
   </script>
   <hr style="border-top: 2px solid #bbb;">
   </div>
-  <h1 class="team_text" style="padding: 20px;">Mock MUN 2020 and earlier</h1>
+  <h1 class="team_text" style="padding: 20px;">Mock MUN Sessions and previous Conferences</h1>
   <div id="gal" class="justified-gallery">
     <a href="images/gallery15.jpg">
       <img src="images/gallery15.jpg">
     </a>
     <a href="images/gallery2.jpg">
       <img src="images/gallery2.jpg" />
-    </a>
-    <a href="images/gallery3.jpg">
-      <img src="images/gallery3.jpg" />
     </a>
     <a href="images/gallery4.jpg">
       <img src="images/gallery4.jpg" />
@@ -157,12 +160,6 @@
       <a href="images/gallery10.jpg">
         <img src="images/gallery10.jpg" />
       </a>
-      <a href="images/gallery3.jpg">
-        <img src="images/gallery3.jpg" />
-      </a>
-      <a href="images/image10.jpg">
-        <img src="images/image10.jpg" />
-      </a>
       <a href="images/image8.jpg">
         <img src="images/image8.jpg" />
       </a>
@@ -178,7 +175,7 @@
     $('#gal').justifiedGallery({
       rowHeight: 300,
       maxRowHeight: 350,
-      lastRow: 'nojustify',
+      lastRow: 'center',
       margins: 10
     });
   </script>
@@ -198,10 +195,10 @@
         <a href="/gallery">Gallery</a>
         ·
       <a class="dropdown-toggle" id="Dropdown2" role="button" data-toggle="dropdown" aria-haspopup="true"
-        aria-expanded="false" style="color: #ef6c57;">
+        aria-expanded="false">
         Apply
       </a>
-      <div class="dropdown-menu dropdown-menu-right bg-primary" aria-labelledby="Dropdown2">
+      <div class="dropdown-menu dropdown-menu-right" aria-labelledby="Dropdown2">
         <a class="dropdown-item" href="/apply_ST">Delegate Applications</a>
         <a class="dropdown-item" href="/apply_EB">Executive Board Applications</a>
       </div>

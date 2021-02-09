@@ -9,7 +9,6 @@ const { Parser } = require("json2csv");
 dotenv.config();
 
 const url = process.env.TasneemDB;
-//const port = 3000;
 const port = process.env.PORT || 3000;
 
 mongoose
@@ -49,6 +48,10 @@ app.get("/", function (req, res) {
   res.render("index");
 });
 
+app.get("/history", (req, res) => {
+  //res.sendFile(__dirname + "/views/history.html");
+  res.render('history');
+});
 app.get("/apply_ST", (req, res) => {
   res.render("student_form");
 });
