@@ -126,7 +126,7 @@ app.get("/student-applicants-list", async (req, res) => {
   const filteredData = applicants.map((doc) => doc.data);
   filteredData.forEach(data=>{
     const date = new Date(data.created);
-    data.created = moment(date).format("Do MMM, h:mm:ss a");
+    data.created = moment(date).utcOffset(330).format("Do MMM, h:mm:ss a");
   })
   res.render("student-applicants", {
     applicants: filteredData,
@@ -138,7 +138,7 @@ app.get("/eb-applicants-list", async (req, res) => {
   const filteredData = applicants.map((doc) => doc.data);
   filteredData.forEach(data=>{
     const date = new Date(data.created);
-    data.created = moment(date).format("Do MMM, h:mm:ss a");
+    data.created = moment(date).utcOffset(330).format("Do MMM, h:mm:ss a");
   })
   res.render("eb-applicants", {
     applicants: filteredData,
