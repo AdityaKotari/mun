@@ -7,6 +7,8 @@ const fs = require("fs");
 const { Parser } = require("json2csv");
 const { DH_CHECK_P_NOT_PRIME } = require("constants");
 
+const moment = require("moment");
+
 dotenv.config();
 
 const url = process.env.TasneemDB;
@@ -24,7 +26,7 @@ mongoose
 
 const formSchema = new mongoose.Schema(
   {
-    data: Object
+    data: Object,
   },
   { collection: `registered` }
 );
@@ -32,7 +34,7 @@ const formSchema = new mongoose.Schema(
 const Form = mongoose.model("Form", formSchema);
 
 const formData = (bodyData) => {
-  const newBodyData = {created: new Date().toString(), ...bodyData};
+  const newBodyData = { created: new Date().toString(), ...bodyData };
   Form({ data: newBodyData }).save((err) => {
     if (err) {
       throw err;
@@ -52,7 +54,7 @@ app.get("/", function (req, res) {
 
 app.get("/history", (req, res) => {
   //res.sendFile(__dirname + "/views/history.html");
-  res.render('history');
+  res.render("history");
 });
 app.get("/apply_ST", (req, res) => {
   res.render("student_form");
@@ -82,7 +84,7 @@ app.get("/student-application-list", async (req, res) => {
   const ebs = await Form.find({ "data.category": "student" });
   if (!ebs.length) return res.redirect("/");
   const filteredEbs = ebs.map((eb) => {
-    return {...eb.data};
+    return { ...eb.data };
   });
   const json2csvParser = new Parser({});
   const csv = json2csvParser.parse(filteredEbs);
@@ -103,7 +105,7 @@ app.get("/eb-application-list", async (req, res) => {
   const ebs = await Form.find({ "data.category": "eb" });
   if (!ebs.length) return res.redirect("/");
   const filteredEbs = ebs.map((eb) => {
-    return {...eb.data};
+    return { ...eb.data };
   });
   const json2csvParser = new Parser({});
   const csv = json2csvParser.parse(filteredEbs);
@@ -119,21 +121,29 @@ app.get("/eb-application-list-download", (req, res) => {
   // res.redirect("/");
 });
 
-app.get('/student-applicants-list',async(req,res)=>{
-    const applicants = await Form.find({'data.category': 'student'});
-    const filteredData = applicants.map(doc => doc.data);
-    res.render('student-applicants',{
-      applicants : filteredData
-    });
-})
+app.get("/student-applicants-list", async (req, res) => {
+  const applicants = await Form.find({ "data.category": "student" });
+  const filteredData = applicants.map((doc) => doc.data);
+  filteredData.forEach(data=>{
+    const date = new Date(data.created);
+    data.created = moment(date).format("Do MMM, h:mm:ss a");
+  })
+  res.render("student-applicants", {
+    applicants: filteredData,
+  });
+});
 
-app.get('/eb-applicants-list',async(req,res)=>{
-    const applicants = await Form.find({'data.category': 'eb'});
-    const filteredData = applicants.map(doc=> doc.data);
-    res.render('eb-applicants',{
-      applicants : filteredData
-    });
-})
+app.get("/eb-applicants-list", async (req, res) => {
+  const applicants = await Form.find({ "data.category": "eb" });
+  const filteredData = applicants.map((doc) => doc.data);
+  filteredData.forEach(data=>{
+    const date = new Date(data.created);
+    data.created = moment(date).format("Do MMM, h:mm:ss a");
+  })
+  res.render("eb-applicants", {
+    applicants: filteredData,
+  });
+});
 
 app.listen(port, () => {
   console.log("Server up and running on PORT ", port);
