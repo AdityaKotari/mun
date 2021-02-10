@@ -5,6 +5,7 @@ const mongoose = require("mongoose");
 const dotenv = require("dotenv");
 const fs = require("fs");
 const { Parser } = require("json2csv");
+const { DH_CHECK_P_NOT_PRIME } = require("constants");
 
 dotenv.config();
 
@@ -23,7 +24,7 @@ mongoose
 
 const formSchema = new mongoose.Schema(
   {
-    data: Object,
+    data: Object
   },
   { collection: `registered` }
 );
@@ -31,7 +32,8 @@ const formSchema = new mongoose.Schema(
 const Form = mongoose.model("Form", formSchema);
 
 const formData = (bodyData) => {
-  Form({ data: bodyData }).save((err) => {
+  const newBodyData = {created: new Date().toString(), ...bodyData};
+  Form({ data: newBodyData }).save((err) => {
     if (err) {
       throw err;
     }
@@ -80,7 +82,7 @@ app.get("/student-application-list", async (req, res) => {
   const ebs = await Form.find({ "data.category": "student" });
   if (!ebs.length) return res.redirect("/");
   const filteredEbs = ebs.map((eb) => {
-    return eb.data;
+    return {...eb.data};
   });
   const json2csvParser = new Parser({});
   const csv = json2csvParser.parse(filteredEbs);
@@ -101,7 +103,7 @@ app.get("/eb-application-list", async (req, res) => {
   const ebs = await Form.find({ "data.category": "eb" });
   if (!ebs.length) return res.redirect("/");
   const filteredEbs = ebs.map((eb) => {
-    return eb.data;
+    return {...eb.data};
   });
   const json2csvParser = new Parser({});
   const csv = json2csvParser.parse(filteredEbs);
@@ -116,6 +118,22 @@ app.get("/eb-application-list-download", (req, res) => {
   res.download(__dirname + "/ebs.csv", "ebs.csv");
   // res.redirect("/");
 });
+
+app.get('/student-applicants-list',async(req,res)=>{
+    const applicants = await Form.find({'data.category': 'student'});
+    const filteredData = applicants.map(doc => doc.data);
+    res.render('student-applicants',{
+      applicants : filteredData
+    });
+})
+
+app.get('/eb-applicants-list',async(req,res)=>{
+    const applicants = await Form.find({'data.category': 'eb'});
+    const filteredData = applicants.map(doc=> doc.data);
+    res.render('eb-applicants',{
+      applicants : filteredData
+    });
+})
 
 app.listen(port, () => {
   console.log("Server up and running on PORT ", port);

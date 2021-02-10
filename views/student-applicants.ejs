@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <title>NITS MUN | Applicants List</title>
+</head>
+<body>
+    <div class="" style="margin-top: 5vh;">
+    <h1 style="text-align: center;"> Students List</h1>
+    <table class="centered responsive-table highlight bordered">
+        <thead>
+          <tr>
+                <th data-field="Created">Created</th>
+                <th data-field="Student_name">Student_name</th>
+                <th data-field="Student_College">Student_College</th>
+                <th data-field="Student_email">Student_email</th>
+                <th data-field="Student_contact">Student_contact</th>
+                <th data-field="Student_Committee">Student_Committee</th>
+                <th data-field="ST_UNHSC 1st Country">ST_UNHSC 1st Country</th>
+                <th data-field="ST_UNHSC 2nd Country">ST_UNHSC 2nd Country</th>
+                <th data-field="ST_UNHSC 3rd Country">ST_UNHSC 3rd Country</th>
+                <th data-field="ST_UNOOSA 1st Country">ST_UNOOSA 1st Country</th>
+                <th data-field="ST_UNOOSA 2nd Country">ST_UNOOSA 2nd Country</th>
+                <th data-field="ST_UNOOSA 3rd Country">ST_UNOOSA 3rd Country</th>
+                <th data-field="ST_Past MUN">ST_Past MUN</th>
+                <th data-field="ST_Past Exprerience">ST_Past Exprerience</th>
+                <th data-field="ST_prefer">ST_prefer</th>
+                <th data-field="Student_Queries">Student_Queries</th>
+          </tr>
+        </thead>
+
+        <tbody>
+            <% applicants.forEach((applicant)=>{ %>
+              <tr>
+                <td><%= applicant['created'] %></td>
+                <td><%= applicant['Student_name'] %></td>
+                <td><%= applicant['Student_College'] %></td>
+                <td><%= applicant['Student_email'] %></td>
+                <td><%= applicant['Student_contact'] %></td>
+                <td><%= applicant['Student_Committee'] %></td>
+                <td><%= applicant['ST_UNHSC 1st Country'] %></td>
+                <td><%= applicant['ST_UNHSC 2nd Country'] %></td>
+                <td><%= applicant['ST_UNHSC 3rd Country'] %></td>
+                <td><%= applicant['ST_UNOOSA 1st Country'] %></td>
+                <td><%= applicant['ST_UNOOSA 2nd Country'] %></td>
+                <td><%= applicant['ST_UNOOSA 3rd Country'] %></td>
+                <td><%= applicant['ST_Past MUN'] %></td>
+                <td><%= applicant['ST_Past Exprerience'] %></td>
+                <td><%= applicant['ST_prefer'] %></td>
+                <td><%= applicant['Student_Queries'] %></td>
+              </tr>
+            <% }) %>
+        </tbody>
+      </table>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+</body>
+</html>

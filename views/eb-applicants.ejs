@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <title>NITS MUN | Applicants List</title>
+</head>
+<body>
+    <div class="" style="margin-top: 5vh;">
+    <h1 style="text-align: center;"> EB List</h1>
+    <table class="centered responsive-table highlight bordered">
+        <thead>
+          <tr>
+                <th data-field="Created">Created</th>
+                <th data-field="Eb_Name">Eb_Name</th>
+                <th data-field="EB_Education">EB_Education</th>
+                <th data-field="EB_email">EB_email</th>
+                <th data-field="EB_contact">EB_contact</th>
+                <th data-field="EB_Resume">EB_Resume</th>
+                <th data-field="EB_Profile link">EB_Profile link</th>
+                <th data-field="EB_Queries">EB_Queries</th>
+          </tr>
+        </thead>
+
+        <tbody>
+            <% applicants.forEach((applicant)=>{ %>
+              <tr>
+                <td><%= applicant['created'] %></td>
+                <td><%= applicant['Eb_Name'] %></td>
+                <td><%= applicant['EB_Education'] %></td>
+                <td><%= applicant['EB_email'] %></td>
+                <td><%= applicant['EB_contact'] %></td>
+                <td><%= applicant['EB_Resume'] %></td>
+                <td><%= applicant['EB_Profile link'] %></td>
+                <td><%= applicant['EB_Queries'] %></td>
+              </tr>
+            <% }) %>
+        </tbody>
+      </table>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+</body>
+</html>
