@@ -152,11 +152,12 @@ app.listen(port, () => {
 
 // Script to delete all the participants from the data
 // const fun = async ()=>{
-//     const participants = await Form.find();
+//   const participants = await Form.find({});
 //     participants.forEach(async (doc)=>{
-//       await Form.findByIdAndDelete(doc._id);
+//         if(!doc.data.category)
+//           console.log(doc);
 //     })
-//     console.log('Participants ', participants);
+    // console.log('Participants ', participants.length);
 // }
 
 // fun();
