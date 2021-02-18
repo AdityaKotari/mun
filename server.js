@@ -60,7 +60,8 @@ app.get("/apply_ST", (req, res) => {
   res.render("student_form");
 });
 app.get("/apply_EB", (req, res) => {
-  res.render("eb_form");
+  // res.render("eb_form");
+  res.render("closed");
 });
 app.get("/gallery", (req, res) => {
   // res.sendFile(__dirname + "/views/gallery.html");
